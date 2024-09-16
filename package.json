@@ -1,6 +1,6 @@
 {
   "name": "com.exerussus.ecsmodule.vfxsprites",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "displayName": "Vfx Sprites",
   "description": "Модуль для 1EasyEcs",
   "unity": "2020.3",
