@@ -18,7 +18,10 @@ namespace ECS.Modules.Exerussus.VfxSprites
         {
             World = world;
             ViewApiLoadingMark = new PoolerModule<VfxSpritesData.ViewApiLoadingMark>(world);
-            ViewApi = new PoolerModule<VfxSpritesData.ViewApi>(world);
+            ViewApi = new PoolerModule<VfxSpritesData.ViewApi>(world);        
+            
+            if (Settings.AddressableInfos == null || Settings.AddressableInfos.Length == 0) return;
+            foreach (var addressableInfo in Settings.AddressableInfos) _assetPooler.Initialize(addressableInfo.name, addressableInfo.path);
         }
         
         public EcsWorld World { get; private set; }
