@@ -9,6 +9,11 @@ namespace ECS.Modules.Exerussus.VfxSprites
     {
         public VfxSpritesSettings Settings = new();
         
+        protected override void OnBeforePoolInitializing(EcsWorld world, VfxSpritesPooler pooler)
+        {
+            Pooler.PreInitialize(Settings);
+        }
+
         protected override void SetInitSystems(IEcsSystems initSystems)
         {
             initSystems.Add(new VfxCreatorSystem());
