@@ -9,7 +9,7 @@ namespace ECS.Modules.Exerussus.VfxSprites
 {
     public class VfxSpritesPooler : IGroupPooler
     {
-        public void PreInitialize(VfxSpritesSettings settings)
+        public virtual void PreInitialize(VfxSpritesSettings settings)
         {
             Settings = settings;
         }
